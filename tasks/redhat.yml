@@ -3,3 +3,4 @@
   ansible.builtin.yum:
     name: https://yum.dalibo.org/labs/dalibo-labs-{{ rpm_repo_package_version }}.noarch.rpm
     state: present
+    disable_gpg_check: true

@@ -1,6 +1,7 @@
 dependencies: []
 
 galaxy_info:
+  namespace: dalibo
   role_name: repo_dalibo_labs
   author: Damien Clochard
   description: Dalibo Labs Repository for RHEL/Debian systems
