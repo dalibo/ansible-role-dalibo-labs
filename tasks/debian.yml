@@ -1,10 +1,17 @@
 ---
-- name: Add Dalibo Labs signing key
+
+- name: Install gpg (DEB)
+  ansible.builtin.apt:
+    name: gpg
+    state: present
+    update_cache: true
+
+- name: Add Dalibo Labs signing key (DEB)
   ansible.builtin.apt_key:
     url: https://apt.dalibo.org/labs/debian-dalibo.asc
     state: present
 
-- name: Add Dalibo Labs repository
+- name: Add Dalibo Labs repository (DEB)
   ansible.builtin.apt_repository:
     repo: "deb https://apt.dalibo.org/labs {{ ansible_distribution_release }}-dalibo main"
     state: present
