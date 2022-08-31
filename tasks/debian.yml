@@ -10,5 +10,4 @@
     state: present
     filename: dalibo-labs
   notify:
-      - Update the APT cache
-
+    - Update the APT cache
