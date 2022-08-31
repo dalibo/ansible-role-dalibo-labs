@@ -1,0 +1,14 @@
+---
+- name: Add Dalibo Labs signing key
+  ansible.builtin.apt_key:
+    url: https://apt.dalibo.org/labs/debian-dalibo.asc
+    state: present
+
+- name: Add Dalibo Labs repository
+  ansible.builtin.apt_repository:
+    repo: "deb https://apt.dalibo.org/labs {{ ansible_distribution_release }}-dalibo main"
+    state: present
+    filename: dalibo-labs
+  notify:
+      - Update the APT cache
+

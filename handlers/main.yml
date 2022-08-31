@@ -1,0 +1,6 @@
+---
+# handlers file for repo-dalibo-labs
+
+- name: Update the APT cache
+  ansible.builtin.apt:
+    update_cache: true
